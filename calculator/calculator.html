@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style type="text/css">
+    input[type=button] {
+        margin: 1px 1px 1px 1px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid brown;
+        font-size: 30px;
+    }
+
+
+    input[type=text] {
+        height: 50px;
+        width: 225px;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        font-size: 30px;
+        color: black;
+    }
+    </style>
+    <script type="text/javascript">
+    function displayNum(n1) {
+
+        //calcform.txt1.value += n1;
+
+        document.forms["calcform"]["txt1"].value+=n1;
+    }
+    </script>
+</head>
+
+<body>
+    <form name="calcform">
+        <input type="text" name="txt1"><br />
+        <input type="button" name="btn9" value="9" onclick="displayNum(btn9.value)">
+        <input type="button" name="btn8" value="8" onclick="displayNum(btn8.value)">
+        <input type="button" name="btn7" value="7" onclick="displayNum(btn7.value)">
+        <input type="button" name="addBtn" value="+" onclick="displayNum(addBtn.value)"><br />
+        <input type="button" name="btn6" value="6" onclick="displayNum(btn6.value)">
+        <input type="button" name="btn5" value="5" onclick="displayNum(btn5.value)">
+        <input type="button" name="btn4" value="4" onclick="displayNum(btn4.value)">
+        <input type="button" name="subBtn" value="-" onclick="displayNum(subBtn.value)"><br />
+        <input type="button" name="btn3" value="3" onclick="displayNum(btn3.value)">
+        <input type="button" name="btn2" value="2" onclick="displayNum(btn2.value)">
+        <input type="button" name="btn1" value="1" onclick="displayNum(btn1.value)">
+        <input type="button" name="mulBtn" value="*" onclick="displayNum(mulBtn.value)"><br>
+        <input type="button" name="btn0" value="0" onclick="displayNum(btn0.value)">
+        <input type="button" name="sBtn" value="." onclick="displayNum(sBtn.value)">
+        <input type="button" name="equalbtn" value="=" onclick="txt1.value= eval(txt1.value)">
+        <input type="button" name="dividebtn" value="/" onclick="displayNum(dividebtn.value)">
+    </form>
+</body>
+
+</html>
